@@ -20,10 +20,16 @@
 
 .section .slider{
     /* background-color: #027889; */
-    /* background-image: url("../images/company.jpg"); */
+    background-image: url("../images/inkandcolors.jpg");
     height:600px;
 }
 
+.section .slider h1{
+    margin-top: 15%;
+    font-size: 7em;
+    /* color:black; */
+    /* background:rgba(0, 0, 0, .75); */
+}
 /* ///////////////////////////////////////////// */
 /* Images */
 /* ///////////////////////////////////////////// */
@@ -49,7 +55,7 @@
 }
 
 #printimage1{
-    background-image: url("images/fan.jpg");
+    background-image: url("images/fourcolorpress.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,7 +63,7 @@
 }
 
 #printimage2{
-    background-image: url("images/fan.jpg");
+    background-image: url("images/digitalprinter.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -147,12 +153,15 @@
     height: 600px;
 }
 
+.col .servicetext{
+    align-items: flex-start;
+}
 /* ///////////////////////////////////////////// */
 /* Custom Bullet Points */
 /* ///////////////////////////////////////////// */
-.section.black ul, .section.offwhite ul{
+/* .section.black ul, .section.offwhite ul{
     padding-inline-start: 0px;
-}
+} */
 
 .section.black ul li{
     color:white;
@@ -178,5 +187,8 @@
     .section .slider{
         height: 313px;
         background-size: 500px 313px;
+    }
+    .section .slider h1{
+        font-size: 4em;
     }
 }

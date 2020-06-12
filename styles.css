@@ -1285,19 +1285,21 @@ h2 {
 /* ///////////////////////////////////////////// */
 .section.calltoaction{
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../images/coloredpaper.jpg"); */
-    background-color: #027889;
-    /* Set a specific height */
-    height: 600px;
-  
+    background-image: url("../images/tealbanner.png");
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    
+    /* background-color: #027889; */
+    height: 600px;
 }
 
 .section.calltoaction h1{
-    color:#eee;
+    /* color:#eee; */
+    /* color:rgb(30, 30, 30); */
+    color: #003c46;
     margin-top:100px;
 }
 
