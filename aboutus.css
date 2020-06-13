@@ -25,21 +25,21 @@
 /* Images */
 /* ///////////////////////////////////////////// */
 #aboutusimage1{
-    background-image: url("images/designcolors.jpg");
+    background-image: url("images/brookstoneletters.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #aboutusimage2{
-    background-image: url("images/printingpress.jpg");
+    background-image: url("images/oldpress.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #aboutusimage3{
-    background-image: url("images/finishing.jpg");
+    background-image: url("images/printdad.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
