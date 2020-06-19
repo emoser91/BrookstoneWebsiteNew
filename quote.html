@@ -57,68 +57,63 @@
 
     <div class="wrapper">
         <h1>Request a Quote</h1>
-        <h2>Please provide the following information and we'll get back to you soon as possible with a quote. Items
-            marked with astericks (*) are required.</h2>
-        <div id="error_message">
+        <h2>Please fill out as much of the form as possible and allow 1
+             business day for a response from one of our sales associates.</h2>
+        <div id="error_message"></div>
 
-        </div>
-        <!-- <form action="" id="myform" onsubmit="return validate();"> -->
-        <quoteform action="quote.php" method="post" id="myform">
+        <form action="quote.php" method="post" id="myform">
             <h3>Personal Information</h3>
             <div class="input_field">
-                <input type="text" name="name" placeholder="Name*" id="name">
+                <input type="text" name="name" placeholder="Name" id="name">
             </div>
             <div class="input_field">
-                <input type="text" placeholder="Company" id="company">
+                <input type="text" name="company" placeholder="Company" id="company">
             </div>
             <div class="input_field">
-                <input type="text" placeholder="Address*" id="address">
+                <input type="text" name="address" name="address" placeholder="Address" id="address">
             </div>
             <div class="input_field">
-                <input type="text" placeholder="City*" id="city">
+                <input type="text" name="city" placeholder="City" id="city">
             </div>
             <div class="input_field">
-                <input type="text" placeholder="State*" id="state">
+                <input type="text" name="state" placeholder="State" id="state">
             </div>
             <div class="input_field">
-                <input type="text" placeholder="Zip Code*" id="zipcode">
+                <input type="text" name="zip" placeholder="Zip Code" id="zipcode">
             </div>
             <div class="input_field">
-                <input type="text" placeholder="Phone" id="phone">
-            </div>
-            <!-- <div class="input_field">
-                <input type="text" placeholder="Subject" id="subject">
-            </div> -->
-            <div class="input_field">
-                <input type="text" name="email" placeholder="Email*" id="email">
+                <input type="text" name="phone" placeholder="Phone" id="phone">
             </div>
             <div class="input_field">
-                <input type="text" placeholder="Fax*" id="fax">
+                <input type="text" name="email" name="email" placeholder="Email" id="email">
+            </div>
+            <div class="input_field">
+                <input type="text" name="fax" placeholder="Fax" id="fax">
             </div>
             <h3>Product Information</h3>
             <div class="input_field">
-                <input type="text" name="subject" placeholder="Job Type*" id="subject">
+                <input type="text" name="job" placeholder="Job Type" id="subject">
             </div>
             <div class="input_field">
-                <input type="text" placeholder="Due Date" id="duedate">
+                <input type="text" name="duedate" placeholder="Due Date" id="duedate">
             </div>
             <div class="input_field">
-                <input type="text" placeholder="Quantity*" id="quantity">
+                <input type="text" name="quantity" placeholder="Quantity" id="quantity">
             </div>
             <div class="input_field">
-                <input type="text" placeholder="Finished Size" id="finishedsize">
+                <input type="text" name="size" placeholder="Finished Size" id="finishedsize">
             </div>
             <div class="input_field">
-                <input type="text" placeholder="Sides" id="sides">
+                <input type="text" name="sides" placeholder="Sides (1 / 2)" id="sides">
             </div>
             <div class="input_field">
-                <input type="text" placeholder="Ink" id="ink">
+                <input type="text" name="ink" placeholder="Ink (1 / 2 / 4 / Other)" id="ink">
             </div>
             <div class="input_field">
-                <input type="text" placeholder="Stock" id="stock">
+                <input type="text" name="stock" placeholder="Stock" id="stock">
             </div>
             <div class="input_field">
-                <input type="text" placeholder="Artwork" id="artwork">
+                <input type="text" name="artwork" placeholder="Artwork (Design / Supplied)" id="artwork">
             </div>
             <div class="input_field">
                 <textarea placeholder="Additional Information" name="message" id="message"></textarea>
@@ -126,7 +121,7 @@
             <div class="btn">
                 <input type="submit" name="submit">
             </div>
-        </quoteform>
+        </form>
     </div>
 
     <footer id="Footer">
@@ -149,9 +144,13 @@
             <p>We work with clients from all over. Get in touch with us!</p>
         </div>
         <div id=contacts>
-            <p>info@brookstoneprinting.com &nbsp; &nbsp; (262) 255-3130 &nbsp; &nbsp; 7325 30th Ave, Kenosha, WI
-                53142
+            <p>info@brookstoneprinting.com &nbsp; &nbsp; (262) 255-3130 &nbsp; &nbsp; 7325 30th Ave, Kenosha, WI 53142
             </p>
+        </div>
+        <div id=contactsmobile>
+            <p>(262) 255-3130</p>
+            <p>info@brookstoneprinting.com </p>
+            <p>7325 30th Ave, Kenosha, WI 53142</p>
         </div>
         <div id=copyright>
             <p>©2020. All Rights Reserved | Brookstone Printing</p>
@@ -166,7 +165,6 @@
             <div id="error_message">
 
             </div>
-            <!-- <form action="" id="myform" onsubmit="return validate();"> -->
             <form action="contact.php" method="post" id="myform">
                 <div class="input_field">
                     <input type="text" name="name" placeholder="Name" id="name">

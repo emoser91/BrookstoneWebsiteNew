@@ -19,6 +19,7 @@ if(isset($_POST['submit'])){
     $txt = "You have received a Quote Request e-mail from  ".$name."/n/n".$message;
 
     if ( mail($mailTo,$subject,$txt,$headers) ) {
+        // echo '<script>alert("The email has been Sent!")</script>';
         echo "The email has been sent!";
     } else {
         echo "The email has failed!";
