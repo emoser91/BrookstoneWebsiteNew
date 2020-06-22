@@ -538,7 +538,10 @@ h2.speedmaster {
 }
 
 #speedmasterimage{
-    background-image: url("images/speedmaster.jpg");
+    /* background-image: url("images/speedmaster.jpg"); */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), url("../images/bigpressedit5.jpg"); */
+    background-image: url("images/bigpressedit5.jpg");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -1023,7 +1026,7 @@ h2 {
 }
 
 #iconwhy1{
-    background-image: url("images/bluepen.PNG");
+    background-image: url("images/WhyBrookstone-01.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1031,7 +1034,7 @@ h2 {
 }
 
 #iconwhy2{
-    background-image: url("images/bluepen.PNG");
+    background-image: url("images/WhyBrookstone-02.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1039,7 +1042,7 @@ h2 {
 }
 
 #iconwhy3{
-    background-image: url("images/bluepen.PNG");
+    background-image: url("images/WhyBrookstone-03.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1047,7 +1050,7 @@ h2 {
 }
 
 #iconwhy4{
-    background-image: url("images/bluepen.PNG");
+    background-image: url("images/WhyBrookstone-05.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1250,23 +1253,26 @@ h2 {
 }
 
 #iconrecycle{
-    background-image: url("../images/trash.png");
+    background-image: url("../images/EnviornmentIcons-01.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     margin-top: 20px;
 }
 
 #iconnontoxic{
-    background-image: url("../images/shield.png");
+    background-image: url("../images/EnviornmentIcons-02.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     margin-top: 20px;
 }
 
 #iconpaper{
-    background-image: url("../images/pinetree.png");
+    background-image: url("../images/EnviornmentIcons-03.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     margin-top: 20px;
 }
 
