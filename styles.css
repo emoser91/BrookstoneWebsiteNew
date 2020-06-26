@@ -525,6 +525,8 @@ h2.speedmaster {
     font-size: 3.5em;
     color:white;
     background: rgba(2, 120, 137, .75);
+    text-transform: capitalize
+    ;
 }
 
 .speedmasterimgholder {
@@ -956,7 +958,7 @@ h2 {
     font-family: 'Roboto Slab', sans-serif;
     text-align: center;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     margin: 0% 15% 5%;
     letter-spacing: 1px;
 }
@@ -998,7 +1000,7 @@ h2 {
 /* ///////////////////////////////////////////// */
 
 #serviceimage1{
-    background-image: url("images/designcolors.jpg");
+    background-image: url("images/designpicture.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1012,7 +1014,7 @@ h2 {
 }
 
 #serviceimage3{
-    background-image: url("images/finishing.jpg");
+    background-image: url("images/finishing2.JPG");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1356,7 +1358,7 @@ h2 {
 
 .section.calltoaction h2{
     color:#eee;
-    margin-bottom:50px;
+    margin: 5% 28% 5%;
 }
 
 .ctawrapper{
@@ -1740,6 +1742,10 @@ form{
         margin: 1% 1%;
     }
 
+    h2 {
+        margin: 0% 5% 2.5%;
+    }
+
     .header {
         height: auto;
         background: #eee;
@@ -1859,6 +1865,10 @@ form{
         background-size: 50px 50px;
     }
 
+    .whytext{
+        font-size: 1em;;
+    }
+
     /* Eco Section */
     .col.three.offwhite{
         width: 30%;
@@ -1872,6 +1882,10 @@ form{
     
     .bigtext{
         font-size: 2.75em;
+    }
+
+    .section.calltoaction h2{
+        margin: 5% 20% 5%;
     }
 }
 
