@@ -542,7 +542,7 @@ h2.speedmaster {
 #speedmasterimage{
     /* background-image: url("images/speedmaster.jpg"); */
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), url("../images/bigpressedit5.jpg"); */
-    background-image: url("images/bigpressedit5.jpg");
+    background-image: url("images/bigpressedit6.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1064,74 +1064,86 @@ h2 {
 /* ///////////////////////////////////////////// */
 
 #iconsample1{
-    background-image: url("../images/blankimage.png");
+    background-image: url("../images/brochure.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #iconsample2{
-    background-image: url("../images/blankimage.png");
+    background-image: url("../images/catalog.JPG");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #iconsample3{
-    background-image: url("../images/blankimage.png");
+    background-image: url("../images/pocketfolder.JPG");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #iconsample4{
-    background-image: url("../images/blankimage.png");
+    background-image: url("../images/envelopes2.JPG");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 #iconsample5{
-    background-image: url("../images/blankimage.png");
+    background-image: url("../images/businessforms.JPG");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #iconsample6{
-    background-image: url("../images/blankimage.png");
+    background-image: url("../images/letterhead.JPG");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #iconsample7{
-    background-image: url("../images/blankimage.png");
+    background-image: url("../images/booklets.JPG");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #iconsample8{
-    background-image: url("../images/blankimage.png");
+    background-image: url("../images/directmailers.JPG");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #iconsample9{
-    background-image: url("../images/blankimage.png");
+    background-image: url("../images/businesscards.JPG");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #iconsample10{
-    background-image: url("../images/blankimage.png");
+    background-image: url("../images/packaging.JPG");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #iconsample11{
-    background-image: url("../images/blankimage.png");
+    background-image: url("../images/flyer.JPG");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #iconsample12{
-    background-image: url("../images/blankimage.png");
+    background-image: url("../images/map.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* ///////////////////////////////////////////// */
@@ -1869,6 +1881,29 @@ form{
         font-size: 1em;;
     }
 
+    /* product section */
+    .col .imgholder, .col .imgholderadd.show{
+        height: 200px;
+    }
+
+    .col .imgholder .title{
+        font-size: 1.25em;
+        margin-top: 0px;
+    }
+
+    .col .imgholder .fadedbox p{
+        font-size: 0.75em;
+    }
+
+    .col .imgholderadd .title{
+        font-size: 1.25em;
+        margin-top: 0px;
+    }
+
+    .col .imgholderadd .fadedbox p{
+        font-size: 0.75em;
+    }
+
     /* Eco Section */
     .col.three.offwhite{
         width: 30%;
@@ -1914,6 +1949,10 @@ form{
         padding: 0;
         margin: 0 auto;
         /* float: none; */
+    }
+
+    .col.three{
+        margin: 4% auto;
     }
 
     .col.four, .col.three, .col.two{
@@ -1986,6 +2025,27 @@ form{
 
     h2.speedmaster{
         font-size: 1.5em;
+    }
+
+    /* product section */
+    .col .imgholder, .col .imgholderadd.show{
+        height: 275px;
+    }
+
+    .col .imgholder .title{
+        font-size: 2em;
+    }
+
+    .col .imgholder .fadedbox p{
+        font-size: 1em;
+    }
+
+    .col .imgholderadd .title{
+        font-size: 2em;
+    }
+
+    .col .imgholderadd .fadedbox p{
+        font-size: 1em;
     }
 
     .section.environment{
