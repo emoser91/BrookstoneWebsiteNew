@@ -110,7 +110,7 @@ main h2{
     line-height: 26px;
     display: none;
     margin-bottom: 30px;
-    text-align: justify;
+    /* text-align: justify; */
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -141,6 +141,12 @@ main h2{
     transform: rotate(-224deg);
 }
 
+@media only screen and (max-width: 900px) {
+    main h1 {
+        font-size: 4.5em;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     .faq-t {
         display: none;
@@ -148,6 +154,10 @@ main h2{
 
     .question {
         padding-right: 0px;
+    }
+
+    #texth2{
+        margin: 0% 5% 5%;
     }
 
     main {
