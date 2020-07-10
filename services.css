@@ -173,6 +173,7 @@
 .col .servicetext{
     align-items: flex-start;
 }
+
 /* ///////////////////////////////////////////// */
 /* Custom Bullet Points */
 /* ///////////////////////////////////////////// */
@@ -183,6 +184,8 @@
 .section.black ul li{
     color:white;
     list-style:none;
+    /* indent so text doesnt wrap under the bullet point */
+    text-indent: -1.2em;
     /* left: 0; */
     /* position: relative; */
     /* padding-left:30px; */

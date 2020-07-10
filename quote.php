@@ -16,6 +16,7 @@ if(isset($_POST['submit'])){
     $job = $_POST['job'];
     $duedate = $_POST['duedate'];
     $quantity = $_POST['quantity'];
+    $pages = $_POST['numberofpages'];
     $size = $_POST['size'];
     $sides = $_POST['sides'];
     $ink = $_POST['ink'];
@@ -46,14 +47,15 @@ if(isset($_POST['submit'])){
     $txt .= "Fax:  ".$fax."\n\n";
 
     $txt .= "Product Information: \n";
-    $txt .= "Job Type:  ".$job."\n";
-    $txt .= "Due Date:  ".$duedate."\n";
+    $txt .= "Job Description:  ".$job."\n";
     $txt .= "Quantity:  ".$quantity."\n";
+    $txt .= "Number of Pages:  ".$pages."\n";
     $txt .= "Finished Size:  ".$size."\n";
-    $txt .= "Sides:  ".$sides."\n";
+    $txt .= "Paper:  ".$stock."\n";
     $txt .= "Ink:  ".$ink."\n";
-    $txt .= "Stock:  ".$stock."\n";
+    $txt .= "Sides:  ".$sides."\n";
     $txt .= "Artwork:  ".$artwork."\n";
+    $txt .= "Due Date:  ".$duedate."\n";
     $txt .= "Message:  ".$message."\n";
 
     $subject = "Brookstone Printing Quote Request from  ".$name;
