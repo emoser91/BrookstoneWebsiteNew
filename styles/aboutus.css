@@ -25,21 +25,21 @@
 /* Images */
 /* ///////////////////////////////////////////// */
 #aboutusimage1{
-    background-image: url("images/brookstoneletters.jpg");
+    background-image: url("../images/brookstoneletters.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #aboutusimage2{
-    background-image: url("images/oldpress.jpg");
+    background-image: url("../images/oldpress.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #aboutusimage3{
-    background-image: url("images/printdadedit.jpg");
+    background-image: url("../images/printdadedit.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -36,28 +36,28 @@
 /* Images */
 /* ///////////////////////////////////////////// */
 #designimage1{
-    background-image: url("images/ideabulb.jpg");
+    background-image: url("../images/ideabulb.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #designimage2{
-    background-image: url("images/designlaptops.jpg");
+    background-image: url("../images/designlaptops.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #designimage3{
-    background-image: url("images/fan.jpg");
+    background-image: url("../images/fan.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #printimage1{
-    background-image: url("images/printingpress4.jpg");
+    background-image: url("../images/printingpress4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -65,7 +65,7 @@
 }
 
 #printimage2{
-    background-image: url("images/digitalprinting.jpg");
+    background-image: url("../images/digitalprinting.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,7 +73,7 @@
 }
 
 #printimage3{
-    background-image: url("images/copying.jpg");
+    background-image: url("../images/copying.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,7 +81,7 @@
 }
 
 #printimage4{
-    background-image: url("images/variabledata.jpg");
+    background-image: url("../images/variabledata.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,7 +89,7 @@
 }
 
 #finishingimage1{
-    background-image: url("images/folding.jpg");
+    background-image: url("../images/folding.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -97,7 +97,7 @@
 }
 
 #finishingimage2{
-    background-image: url("images/finishing.jpg");
+    background-image: url("../images/finishing.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -105,7 +105,7 @@
 }
 
 #mailingimage1{
-    background-image: url("images/usmail.jpg");
+    background-image: url("../images/usmail.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

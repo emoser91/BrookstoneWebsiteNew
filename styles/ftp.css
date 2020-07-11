@@ -59,13 +59,13 @@
 /* Icons and images */
 /* ///////////////////////////////////////////// */
 #serviceimage1{
-    background-image: url("images/ftp.PNG");
+    background-image: url("../images/ftp.PNG");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 #icondesign{
-    background-image: url("images/bluepen.PNG");
+    background-image: url("../images/bluepen.PNG");
     background-position: center;
     background-repeat: no-repeat;
     margin-top: 10px;
@@ -73,7 +73,7 @@
 }
 
 #iconprinting{
-    background-image: url("images/bluepaper.PNG");
+    background-image: url("../images/bluepaper.PNG");
     background-position: center;
     background-repeat: no-repeat;
     margin-top: 10px;
@@ -81,7 +81,7 @@
 }
 
 #iconfinishing{
-    background-image: url("images/bluemail.PNG");
+    background-image: url("../images/bluemail.PNG");
     background-position: center;
     background-repeat: no-repeat;
     margin-top: 10px;
