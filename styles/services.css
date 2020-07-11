@@ -1,0 +1,267 @@
+/* ///////////////////////////////////////////// */
+/* Header Desktop */
+/* ///////////////////////////////////////////// */
+.header {
+    line-height: 60px;
+    background: rgba(30, 30, 30, 0.95);
+}
+
+/* ///////////////////////////////////////////// */
+/* Burger Menu */
+/* ///////////////////////////////////////////// */
+
+.burgernav {
+    background: rgba(30, 30, 30, 0.95);
+}
+
+/* ///////////////////////////////////////////// */
+/* Slider */
+/* ///////////////////////////////////////////// */
+
+.section .slider{
+    /* background-color: #027889; */
+    background-image: url("../images/inkandcolors.jpg");
+    height:600px;
+}
+
+.section .slider h1{
+    margin-top: 15%;
+    font-size: 7em;
+    /* color: #003c46; */
+    /* color:black; */
+    /* background:rgba(0, 0, 0, .75); */
+}
+
+/* ///////////////////////////////////////////// */
+/* Images */
+/* ///////////////////////////////////////////// */
+#designimage1{
+    background-image: url("images/ideabulb.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#designimage2{
+    background-image: url("images/designlaptops.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#designimage3{
+    background-image: url("images/fan.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#printimage1{
+    background-image: url("images/printingpress4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+
+#printimage2{
+    background-image: url("images/digitalprinting.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+
+#printimage3{
+    background-image: url("images/copying.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+
+#printimage4{
+    background-image: url("images/variabledata.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+
+#finishingimage1{
+    background-image: url("images/folding.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+
+#finishingimage2{
+    background-image: url("images/finishing.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+
+#mailingimage1{
+    background-image: url("images/usmail.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+
+/* ///////////////////////////////////////////// */
+/* Design Section */
+/* ///////////////////////////////////////////// */
+#designsectionmobile{
+    display: none;
+}
+
+/* ///////////////////////////////////////////// */
+/* Printing Section */
+/* ///////////////////////////////////////////// */
+.col.four {
+    height:50px;
+}
+
+.col.four:hover{
+    cursor: pointer;
+}
+
+/* Start background highlight of first element */
+#printbutton1{
+    background: #027889;
+}
+
+#printsection1 .col, #printsection2 .col, #printsection3 .col, #printsection4 .col{
+    margin-top: 0;
+}
+
+#printsection2, #printsection3, #printsection4{
+    display:none;
+}
+
+#printsectionmobile{
+    display: none;
+}
+
+#finishingsectionmobile{
+    display:none;
+}
+
+/* ///////////////////////////////////////////// */
+/* Misc */
+/* ///////////////////////////////////////////// */
+.col .servicetext h1{
+    font-size: 2.5em;
+}
+
+.section.black h2{
+    color:white;
+}
+
+.section.black p{
+    color:white;
+}
+
+.col .servicetext.big{
+    height: 550px;
+}
+
+.col .servicetext{
+    align-items: flex-start;
+}
+
+/* ///////////////////////////////////////////// */
+/* Custom Bullet Points */
+/* ///////////////////////////////////////////// */
+.section.black ul, .section.offwhite ul{
+    padding-inline-start: 20px;
+}
+
+.section.black ul li{
+    color:white;
+    list-style:none;
+    /* indent so text doesnt wrap under the bullet point */
+    text-indent: -1.2em;
+    /* left: 0; */
+    /* position: relative; */
+    /* padding-left:30px; */
+    /* line-height: 1; */
+}
+
+.section.offwhite ul li{
+    list-style:none;
+}
+
+.section.black ul li::before, .section.offwhite ul li::before{
+    font-size: 1.25em;
+    margin-right: 6px;
+    color: #027889;
+    content:"\25A0";
+}
+
+@media all and (max-width: 900px) {
+    .col .servicetext h1{
+        margin-block-start: 0;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .section .slider{
+        height: 313px;
+        background-size: 500px 313px;
+    }
+
+    .section .slider h1{
+        font-size: 4em;
+    }
+
+    .col .servicetext h1{
+        margin-block-start: 0.67em;
+    }
+
+    #designsection{
+        display:none;
+    }
+    
+    #designsectionmobile{
+        display:block;
+    }
+
+    #printingsection{
+        display: none;
+    }
+
+    /* TODO: This doesnt work when sometimes on desktop inspector */
+    #printsection1, #printsection2, #printsection3, #printsection4{
+        display: none;
+    }
+
+    #printsectionmobile{
+        display:block;
+    }
+
+    #printimage1, #printimage2, #printimage3, #printimage4{
+        height: 250px;
+    }
+
+    #finishingsection{
+        display:none;
+    }
+
+    #finishingsectionmobile{
+        display:block;
+    }
+
+    #finishingimage1, #finishingimage2{
+        height: 250px;
+    }
+
+    #mailingimage1{
+        height: 250px;
+    }
+
+}

@@ -118,7 +118,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     /* background-image: url("../images/brookstone-logo_rgb_Final.png"); */
-    background-image: url("../images/Brookstone Logo_BP_mini.png");
+    background-image: url("../images/Brookstone-Logo_BP_mini.png");
     background-repeat: no-repeat;
     background-size: cover;
     float: left;
@@ -200,7 +200,7 @@ button:hover{
     top: 50%;
     transform: translateY(-50%);
     /* background-image: url("../images/brookstone-logo_rgb_Final.png"); */
-    background-image: url("../images/Brookstone Logo_BP_mini.png");
+    background-image: url("../images/Brookstone-Logo_BP_mini.png");
     /* background-position: center; */
     background-repeat: no-repeat;
     /* background-size: cover; */
@@ -308,7 +308,7 @@ button:hover{
 .section .slider{
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../images/nature.jpg"); */
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/nature.jpg"); */
-    background-image: url("../images/cliff.jpg");
+    background-image: url("../images/cliffside.jpg");
     /* Set a specific height */
     /* height:100vh; */
     height:1400px;
@@ -378,7 +378,7 @@ herobutton:hover{
 }
 
 #herobplogoimage{
-    background-image: url("images/Brookstone Logo_BP.png");
+    background-image: url("images/Brookstone-Logo_BP.png");
     background-size: 200px 157px;
     background-position: center;
     background-repeat: no-repeat;
@@ -386,7 +386,7 @@ herobutton:hover{
 }
 
 #herologoimage{
-    background-image: url("images/Brookstone Logo_White_2.png");
+    background-image: url("images/Brookstone-Logo_White_2.png");
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -992,14 +992,14 @@ h2 {
 }
 
 #serviceimage2{
-    background-image: url("images/printingpress.JPG");
+    background-image: url("images/printingpress.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #serviceimage3{
-    background-image: url("images/finishing2.JPG");
+    background-image: url("images/finishing2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1076,14 +1076,14 @@ h2 {
     background-size: cover;
 }
 #iconsample5{
-    background-image: url("../images/businessforms.JPG");
+    background-image: url("../images/businessforms.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #iconsample6{
-    background-image: url("../images/letterhead.JPG");
+    background-image: url("../images/letterhead.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1118,7 +1118,7 @@ h2 {
 }
 
 #iconsample11{
-    background-image: url("../images/flyer.JPG");
+    background-image: url("../images/flyer.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1630,7 +1630,7 @@ form{
 }
 
 .modal-content .btn input[type="submit"]:hover {
-    background: var(--maincolor);
+    background: transparent;
     color:var(--maincolor);
     cursor: pointer;
 }
