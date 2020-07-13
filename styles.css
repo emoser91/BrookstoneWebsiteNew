@@ -709,7 +709,7 @@ h2.speedmaster {
     /* padding: 130px 20px; */
 }
 
-.col .imgholder:hover .fadedbox {
+.col .imgholder:hover .fadedbox, .col .imgholder:focus .fadedbox {
     background-color: rgb(2, 118, 136, 1);
     opacity: .8;
 }
@@ -782,7 +782,7 @@ h2.speedmaster {
     /* padding: 130px 20px; */
 }
 
-.col .imgholderadd:hover .fadedbox {
+.col .imgholderadd:hover .fadedbox, .col .imgholder:focus .fadedbox {
     background-color: rgb(2, 118, 136, 1);
     opacity: .8;
 }
@@ -809,7 +809,6 @@ h2.speedmaster {
 
 .col .imgholderadd .fadedbox p{
     font-size: 1em;
-    /* opacity: 0; */
     transition-delay: 0.2s;
     transition-duration: 0.3s;
 }
@@ -1704,6 +1703,50 @@ form{
     .col.four{
         margin-left: 3%;
     }
+
+    /* .eco-tabs-container{
+        top: 75%;
+    } */
+
+    .eco-tab{
+        font-size: 1em;;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    #herologoimage{
+        background-size: 750px 186px;
+    }
+
+    .herologoimgholder{
+       height: 200px;
+    }
+
+    .col.four {
+        width:150px;
+        height:160px;
+        margin-left: 4%;
+    }
+
+    .whytext{
+        font-size: 1.1em;
+    }
+
+    /* Eco Section */
+    .col.three.offwhite{
+        width: 30%;
+        margin: 2% 1.5%;
+        height: 400px;
+    }
+
+    .ecotext{
+        font-size: 1.75em;
+    }
+    
+    .bigtext{
+        font-size: 2.75em;
+    }
+
 }
 
 @media all and (max-width: 900px) {
@@ -1804,6 +1847,14 @@ form{
         top: 92em;
     }
 
+    .speedmasterimgholder{
+        height: 450px;
+    }
+
+    h2.speedmaster{
+        font-size: 3em;
+    }
+
     /* Servies */
     .col .serviceimgholder{
         height: 300px;
@@ -1872,7 +1923,7 @@ form{
     }
 
     .whytext{
-        font-size: 1em;;
+        font-size: 1em;
     }
 
     /* product section */
@@ -1915,6 +1966,15 @@ form{
 
     .section.calltoaction h2{
         margin: 5% 20% 5%;
+    }
+
+    .eco-tab{
+        letter-spacing: 0;
+    }
+
+    .eco-tabs-container{
+        width: 60%;
+        left: 20%;
     }
 }
 

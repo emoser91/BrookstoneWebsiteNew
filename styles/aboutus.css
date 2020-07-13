@@ -216,6 +216,13 @@ time {
         height: 313px;
         background-size: 500px 313px;
     }
+
+    .section.map{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:400px;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -230,4 +237,5 @@ time {
     .timeline ul li:nth-child(odd) div {
         left: 35px;
     }
+
 }
