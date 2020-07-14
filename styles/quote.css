@@ -147,15 +147,16 @@ quoteform{
 
 @media all and (max-width:500px) {
     .wrapper h1{
-        font-size: 4.5em;
+        font-size: 3.4em;
     }
 
     .wrapper h2{
+        text-align: left;
         font-size: 1em;
     }
 
     .wrapper h3{
-        font-size: 1.25em;
+        font-size: 1.7em;
     }
 
     .section .slider{

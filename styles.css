@@ -1086,6 +1086,7 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-size: 250px 324px;
 }
 
 #iconsample7{
@@ -1103,10 +1104,11 @@ h2 {
 }
 
 #iconsample9{
-    background-image: url("../images/businesscards2.jpg");
+    background-image: url("../images/flyer.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    /* background-size: 406px 275px; */
 }
 
 #iconsample10{
@@ -1117,7 +1119,7 @@ h2 {
 }
 
 #iconsample11{
-    background-image: url("../images/flyer.jpg");
+    background-image: url("../images/businesscards2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2046,6 +2048,11 @@ form{
         font-weight: 300;
         font-size: 1.2em;
         margin:1% 1% 10%;
+    }
+
+    .section.black h2, .section.offwhite h2, .section.environment h2{
+        text-align: left;
+        margin-left: 20px;
     }
 
     .herobplogoimgholder {

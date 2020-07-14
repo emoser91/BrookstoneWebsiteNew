@@ -151,6 +151,10 @@
     display:none;
 }
 
+#mailingsectionmobile{
+    display:none;
+}
+
 /* ///////////////////////////////////////////// */
 /* Misc */
 /* ///////////////////////////////////////////// */
@@ -262,6 +266,14 @@
 
     #mailingimage1{
         height: 250px;
+    }
+
+    #mailingsection{
+        display:none;
+    }
+
+    #mailingsectionmobile{
+        display:block;
     }
 
 }
