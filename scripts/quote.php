@@ -1,5 +1,50 @@
 <?php
 
+/**
+ * Will make it work if server does not have
+ * allow_url_fopen
+ */
+function fileGetContentsCurl($url)
+{
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_AUTOREFERER, true);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+    $data = curl_exec($ch);
+    curl_close($ch);
+
+    return $data;
+}
+
+/**
+ * Build the captcha request URL
+ */
+function buildCaptchaUrl()
+{
+    $captcha = $_POST['g-recaptcha-response'];
+    $secret = "6LfRILEZAAAAACV9G0JEnEpt1RyyRPrPx9LV-uId";
+    return "https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=" . $captcha . "&remoteip=" . $_SERVER['REMOTE_ADDR'];
+}
+
+/**
+ * Sends the captcha and returns true on success - else false
+ */
+function sendCaptchaResponse()
+{
+    $response = json_decode(fileGetContentsCurl(buildCaptchaUrl()), true);
+    // echo "<pre>";print_r($response);echo"</pre>";
+    if ($response['success'] == false) {
+        return false;
+    }
+    return true;
+
+}
+
+
 if(isset($_POST['submit'])){
     $name = $_POST['name'];
     $mailFrom = $_POST['email'];
@@ -24,7 +69,10 @@ if(isset($_POST['submit'])){
     $artwork = $_POST['artwork'];
     $message = $_POST['message'];
 
-    $mailTo = "main@ericmoser.com";
+    $captcha = $_POST['captcha'];
+
+    // $mailTo = "main@ericmoser.com";
+    $mailTo = "todd@brookstoneprinting.com";
 
     $headers = "From: ".$mailFrom;
     
@@ -60,15 +108,27 @@ if(isset($_POST['submit'])){
 
     $subject = "Brookstone Printing Quote Request from  ".$name;
 
-    if ( mail($mailTo,$subject,$txt,$headers) ) {
-        print("<script>window.alert('The email has been sent!');</script>");
-        // echo "The email has been sent!";
-        // You can also do a redirect to a new page like thank you for your email
-        // header('Location: index.html');
-
-    } else {
-        print("<script>window.alert('The email has failed!');</script>");
-        // echo "The email has failed!";
+    if(sendCaptchaResponse() == true)
+    {
+        //Validation has passed
+        // echo "<pre>";print_r($_POST);echo"</pre>";
+        if ( mail($mailTo,$subject,$txt,$headers) ) 
+        {
+            print("<script>window.alert('The email has been sent!');</script>");
+            // echo "The email has been sent!";
+            // You can also do a redirect to a new page like thank you for your email
+            // header('Location: index.html');
+    
+        } 
+        else 
+        {
+            print("<script>window.alert('The email has failed, Please Try Again.');</script>");
+            // echo "The email has failed!";
+        }
+    }
+    else
+    {
+        echo "Validation Failed, Please Try Again.";
     }
 
 }
