@@ -56,6 +56,37 @@
 }
 
 /* ///////////////////////////////////////////// */
+/* Upload Button */
+/* ///////////////////////////////////////////// */
+buttonupload{
+    padding: 9px 25px;
+    margin-top: 20px;
+    background-color: var(--maincolor);
+    border: 3px solid var(--maincolor);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-family: 'Roboto Slab', sans-serif;
+    color: white;
+    font-weight: normal;
+    font-size:20px;
+}
+
+buttonupload:hover{
+    transition: all 0.3s ease 0s;
+    background-color: transparent;
+}
+
+/* ///////////////////////////////////////////// */
+/* File Drop Box Modifications */
+/* ///////////////////////////////////////////// */
+form{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+/* ///////////////////////////////////////////// */
 /* Icons and images */
 /* ///////////////////////////////////////////// */
 #serviceimage1{
