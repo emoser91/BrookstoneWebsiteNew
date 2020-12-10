@@ -9,7 +9,7 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="styles/dropzone.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles/ftp.css">
+    <link rel="stylesheet" href="styles/upload.css">
     <link rel="icon" type="image/png" href="/favicon.png"/>
 
 </head>
@@ -158,7 +158,7 @@
         <div class="container">
             <h1>Drag and Drop<br> File Upload</h1>
             <h2 class="text white">Drag and Drop all files into the box provided and then click "Upload" to upload your files to Brookstone Printing's
-                Server. Keep in mind that only files with the extensions ".png, .jpg, .gif, .bmp, .jpeg, .pdf" are accepted through this process. After uploading,
+                Server. Keep in mind that only files with the extensions ".png, .jpg, .gif, .bmp, .jpeg, .pdf, .zip, .ai" are accepted through this process. After uploading,
                 please send a courtesy email to artwork@brookstoneprinting.com to confirm that the files uploaded meet the Art Team's requirements. If you
                 require additional assistance with the upload process please email the Art Team at the above address. 
             </h2>
@@ -170,8 +170,8 @@
             <br />
             <div align="center">
                 <buttonupload type="button" class="btn btn-info" id="submit-all">Upload</buttonupload>
-            <!-- </div>
-            <br />
+            </div>
+            <!-- <br />
             <br />
             <div id="preview"></div>
             <br />
@@ -416,7 +416,7 @@
          Dropzone.options.dropzoneFrom = {
           autoProcessQueue: false,
           parallelUploads: 10,
-          acceptedFiles:".png,.jpg,.gif,.bmp,.jpeg, .pdf",
+          acceptedFiles:".png,.jpg,.gif,.bmp,.jpeg,.pdf,.zip,.ai",
           init: function(){
            var submitButton = document.querySelector('#submit-all');
            myDropzone = this;
