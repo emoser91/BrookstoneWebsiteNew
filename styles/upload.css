@@ -86,6 +86,10 @@ form{
     text-align: center;
 }
 
+.dropzone .dz-message .dz-button {
+    margin-left: 0px;
+}
+
 /* ///////////////////////////////////////////// */
 /* Icons and images */
 /* ///////////////////////////////////////////// */
