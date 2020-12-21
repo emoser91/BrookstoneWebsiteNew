@@ -5,13 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brookstone Printing</title>
-    <!-- Including the bootstrap css screws up a lot of my page -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> -->
-    <link rel="stylesheet" href="styles/dropzone.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles/upload.css">
+    <link rel="stylesheet" href="styles/ftp.css">
     <link rel="icon" type="image/png" href="/favicon.png"/>
-
 </head>
 
 <body>
@@ -125,12 +121,6 @@
                     changed before proofing or printing.</p>
             </div>
 
-            <h1>Manual <br> File Upload</h1>
-            <h2 class="text white">Brookstone Printing has the following requirements and procedures when it comes to sharing your artwork with us.
-                Please keep in mind that PDF files up to 10Mb can be emailed to artwork@brookstoneprinting.com and larger files can be sent with Dropbox 
-                or our own FTP or.
-            </h2>
-
             <div class="col two">
                 <h1 class="servicetext">FTP Client Software</h1>
                 <p>The following links can be used to download FTP software:</p>
@@ -154,31 +144,6 @@
         </div>
     </div>
 
-    <div class="section black" id="ftpsection">
-        <div class="container">
-            <h1>Drag and Drop<br> File Upload</h1>
-            <h2 class="text white">Drag and Drop all files into the box provided and then click "Upload" to upload your files to Brookstone Printing's
-                Server. Keep in mind that only files with the extensions ".png, .jpg, .gif, .bmp, .jpeg, .pdf, .zip, .ai" are accepted through this process. After uploading,
-                please send a courtesy email to artwork@brookstoneprinting.com to confirm that the files uploaded meet the Art Team's requirements. If you
-                require additional assistance with the upload process please email the Art Team at the above address. 
-            </h2>
-            
-            <form action="upload.php" class="dropzone" id="dropzoneFrom"></form>
-            
-            </form>
-            <br />
-            <br />
-            <div align="center">
-                <buttonupload type="button" class="btn btn-info" id="submit-all">Upload</buttonupload>
-            </div>
-            <!-- <br />
-            <br />
-            <div id="preview"></div>
-            <br />
-            <br /> -->
-        </div>
-    </div>
-    
 
     <div class="section black">
         <div class="container">
@@ -407,62 +372,6 @@
         };
     </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="scripts/dropzone.js"></script>
-    <script>
-        $(document).ready(function(){
-         
-         Dropzone.options.dropzoneFrom = {
-          autoProcessQueue: false,
-          parallelUploads: 10,
-          acceptedFiles:".png,.jpg,.gif,.bmp,.jpeg,.pdf,.zip,.ai",
-          init: function(){
-           var submitButton = document.querySelector('#submit-all');
-           myDropzone = this;
-           submitButton.addEventListener("click", function(){
-            myDropzone.processQueue();
-           });
-           this.on("complete", function(){
-            if(this.getQueuedFiles().length == 0 && this.getUploadingFiles().length == 0)
-            {
-             var _this = this;
-             _this.removeAllFiles();
-            }
-            list_image();
-           });
-          },
-         };
-        
-         list_image();
-        
-         function list_image()
-         {
-          $.ajax({
-           url:"upload.php",
-           success:function(data){
-            $('#preview').html(data);
-           }
-          });
-         }
-        
-         $(document).on('click', '.remove_image', function(){
-          var name = $(this).attr('id');
-          $.ajax({
-           url:"upload.php",
-           method:"POST",
-           data:{name:name},
-           success:function(data)
-           {
-            list_image();
-           }
-          })
-         });
-         
-        });
-    </script>
-
 </body>
-
 
 </html>

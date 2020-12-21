@@ -4,11 +4,36 @@
 
 $folder_name = 'clientfiles/';
 
+$mailTo = "main@ericmoser.com";
+// $mailTo = "todd@brookstoneprinting.com";
+
+//Just going to use the From section as a CC
+$mailFrom = "emoser91@gmail.com";
+
+$headers = "From: ".$mailFrom;
+
+$subject = "Brookstone Printing File Upload";
+
+//Adding the rest of these helped make the email not go to spam in gmail
+$headers = "Reply-To: ".$mailFrom;
+$headers = "Return-Path: ".$mailFrom;
+$headers = "CC: ".$mailFrom;
+$headers = "BCC: ".$mailFrom;
+
+$txt = "You have received a file upload: \n\n";
+$txt .= "Information: \n";
+$txt .= "Subject: Brookstone Uploads \n";
+$txt .= "Message: A file has been uploaded to the clientfiles folder using Brookstone Printing drag and drop \n";
+
 if(!empty($_FILES))
 {
  $temp_file = $_FILES['file']['tmp_name'];
  $location = $folder_name . $_FILES['file']['name'];
  move_uploaded_file($temp_file, $location);
+
+ $filesent = $_FILES['file']['name'];
+ $txt .= "File Name:  ".$filesent."\n";
+ mail($mailTo,$subject,$txt,$headers);
 }
 
 if(isset($_POST["name"]))
@@ -38,6 +63,7 @@ if(false !== $files)
   }
  }
 }
+
 $output .= '</div>';
 echo $output;
 
