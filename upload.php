@@ -4,11 +4,12 @@
 
 $folder_name = 'clientfiles/';
 
-$mailTo = "main@ericmoser.com";
-// $mailTo = "todd@brookstoneprinting.com";
+// $mailTo = "main@ericmoser.com";
+$mailTo = "artwork@brookstoneprinting.com";
 
 //Just going to use the From section as a CC
-$mailFrom = "emoser91@gmail.com";
+// $mailFrom = "emoser91@gmail.com";
+$mailFrom = "todd@brookstoneprinting.com";
 
 $headers = "From: ".$mailFrom;
 
