@@ -117,6 +117,9 @@ quoteform{
     color:white;
     border-radius: 5px;
     background: #027889;
+
+    /* Correct Wierd Button style on iphone */
+    -webkit-appearance: none;
 }
 
 .wrapper .btn input[type="submit"]:hover {
