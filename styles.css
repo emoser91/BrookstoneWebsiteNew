@@ -1198,11 +1198,19 @@ h2 {
 .section.environment{
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/cedric-froehlich-kKckYvUcPZ0-unsplash.jpg"); */
     background-image:url("../images/leaves.jpg");
-    background-attachment: fixed; /* Parallax Effect */
+    /* background-attachment: fixed; Parallax Effect */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 900px;
+}
+  
+@supports not (-webkit-touch-callout: none) {
+    /* CSS for other than iOS devices */
+    /* iOS does not support fixed backgrounds */
+    .section.environment{
+        background-attachment: fixed; /* Parallax Effect */    
+    }
 }
 
 .section.environment h1, .section.environment h2{
