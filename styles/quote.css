@@ -74,14 +74,6 @@
     max-width: 50%;
 }
 
-/* Todo: I am not sure if this does anything */
-quoteform{
-    position:center;
-    display: inline-block;
-    width: 60%;
-    text-align: center;
-}
-
 .wrapper .input_field input[type="text"],
 .wrapper textarea {
     border: 1px solid #e0e0e0;
@@ -155,11 +147,6 @@ quoteform{
     .wrapper h2{
         font-size: 1em;
         margin: 0% 15% 5%;
-    }
-
-    /* TODO: not sure if this does anything */
-    form{
-        width: 100%;
     }
 
     #myQuoteform{
