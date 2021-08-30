@@ -98,6 +98,7 @@ body {
     text-align: center;
     background: var(--black);
     height: 25px;
+    line-height: 25px;
 }
 
 .header {
@@ -212,6 +213,7 @@ button:hover{
     text-align: center;
     background: var(--black);
     height: 25px;
+    line-height: 25px;
     display:none;
 }
 
@@ -2100,6 +2102,7 @@ form{
     .infotextmobile{
         font-size: 0.9em;
         height: 20px;
+        line-height: 20px;
     }
 
     .herobplogoimgholder {
