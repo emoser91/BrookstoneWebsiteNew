@@ -26,6 +26,18 @@ $txt .= "Information: \n";
 $txt .= "Subject: Brookstone Uploads \n";
 $txt .= "Message: A file has been uploaded to the clientfiles folder using Brookstone Printing drag and drop \n";
 
+//Form Personal Information
+//The information is not passing properly
+$name = $_POST['name'];
+$mailFrom = $_POST['email'];
+$company = $_POST['company'];
+$message = $_POST['message'];
+
+$txt .= "Name:  ".$name."\n";
+$txt .= "Email:  ".$email."\n";
+$txt .= "Company:  ".$company."\n";
+$txt .= "Message:  ".$message."\n";
+
 if(!empty($_FILES))
 {
  $temp_file = $_FILES['file']['tmp_name'];
