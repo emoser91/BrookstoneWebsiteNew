@@ -162,23 +162,24 @@
                 please send a courtesy email to artwork@brookstoneprinting.com to confirm that the files uploaded meet the Art Team's requirements. If you
                 require additional assistance with the upload process please email the Art Team at the above address. 
             </h2>
-            
+
             <form action="upload.php" class="dropzone" id="dropzoneFrom"></form>
 
                 <!-- New Testing Personal Information Form -->
-                <h3>Personal Information</h3>
+                <!-- <h3>Personal Information</h3>
                 <div class="input_field">
-                    <input type="text" name="name" placeholder="Name" id="name">
-                </div>
-                <div class="input_field">
+                    <input type="text" name="name1" placeholder="Name" id="name1">
+                </div> -->
+                <!-- <div class="input_field">
                     <input type="text" name="company" placeholder="Company" id="company">
                 </div>
                 <div class="input_field">
-                    <input type="text" name="email" name="email" placeholder="Email" id="email">
+                    <input type="text" name="email" placeholder="Email" id="email">
                 </div>
                 <div class="input_field">
                     <textarea placeholder="Additional Information" name="message" id="message"></textarea>
-                </div>
+                </div> -->
+                <!-- <div class="g-recaptcha" data-sitekey="6LfRILEZAAAAACLNnsof8sHLiB-sKg6Qi0ZA3Nj4"></div> -->
                 
             </form>
             <br />
@@ -428,52 +429,52 @@
     <script>
         $(document).ready(function(){
          
-         Dropzone.options.dropzoneFrom = {
-          autoProcessQueue: false,
-          parallelUploads: 10,
-          acceptedFiles:".png,.jpg,.gif,.bmp,.jpeg,.pdf,.zip,.ai",
-          init: function(){
-           var submitButton = document.querySelector('#submit-all');
-           myDropzone = this;
-           submitButton.addEventListener("click", function(){
-            myDropzone.processQueue();
-           });
-           this.on("complete", function(){
-            if(this.getQueuedFiles().length == 0 && this.getUploadingFiles().length == 0)
+            Dropzone.options.dropzoneFrom = {
+            autoProcessQueue: false,
+            parallelUploads: 10,
+            acceptedFiles:".png,.jpg,.gif,.bmp,.jpeg,.pdf,.zip,.ai",
+            init: function(){
+                var submitButton = document.querySelector('#submit-all');
+                myDropzone = this;
+                submitButton.addEventListener("click", function(){
+                    myDropzone.processQueue();
+                });
+                this.on("complete", function(){
+                    if(this.getQueuedFiles().length == 0 && this.getUploadingFiles().length == 0)
+                    {
+                        var _this = this;
+                        _this.removeAllFiles();
+                    }
+                    list_image();
+                });
+            },
+            };
+        
+            list_image();
+
+            function list_image()
             {
-             var _this = this;
-             _this.removeAllFiles();
+                $.ajax({
+                    url:"upload.php",
+                    success:function(data){
+                        $('#preview').html(data);
+                    }
+                });
             }
-            list_image();
-           });
-          },
-         };
         
-         list_image();
-        
-         function list_image()
-         {
-          $.ajax({
-           url:"upload.php",
-           success:function(data){
-            $('#preview').html(data);
-           }
-          });
-         }
-        
-         $(document).on('click', '.remove_image', function(){
-          var name = $(this).attr('id');
-          $.ajax({
-           url:"upload.php",
-           method:"POST",
-           data:{name:name},
-           success:function(data)
-           {
-            list_image();
-           }
-          })
-         });
-         
+            $(document).on('click', '.remove_image', function(){
+                var name = $(this).attr('id');
+                $.ajax({
+                    url:"upload.php",
+                    method:"POST",
+                    data:{name:name},
+                    success:function(data)
+                    {
+                        list_image();
+                    }
+                })
+            });
+            
         });
     </script>
 
