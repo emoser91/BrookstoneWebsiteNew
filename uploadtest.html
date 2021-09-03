@@ -183,7 +183,8 @@
                     <input type="text" name="lastname" placeholder="lastname" id="lastname">
                 </div>
                 <div class="dropzone" id="dropzoneFrom"></div>
-                <buttonupload type="button" class="btn btn-info" id="submit-all">Upload</buttonupload>
+                <!-- Not sure if I should use submit or button as the type -->
+                <br /><br /><buttonupload type="submit" class="btn btn-info" id="submit-all">Upload</buttonupload> 
             </form>
 
         </div>
@@ -485,6 +486,12 @@
 
             submitButton.addEventListener("click", function(){
                 myDropzone.processQueue();
+            });
+
+            //send all the form data along with the files:
+            this.on("sendingmultiple", function(data, xhr, formData) {
+                formData.append("firstname", jQuery("#firstname").val());
+                formData.append("lastname", jQuery("#lastname").val());
             });
 
             // Clear out files in window after processing
