@@ -83,7 +83,7 @@ if(isset($_POST['submit'])){
             // print("<script>window.alert('The email has been sent!');</script>");
             // echo "The email has been sent!";
             // You can also do a redirect to a new page like thank you for your email
-            header('Location: emailsuccess.html');
+            header('Location: ../emailsuccess.html');
     
         } 
         else 
