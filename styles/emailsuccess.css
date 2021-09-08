@@ -67,14 +67,15 @@ backbutton:hover{
 /* ///////////////////////////////////////////// */
 /* Responsive */
 /* ///////////////////////////////////////////// */
-@media all and (max-width: 1200px) {
-    
-}
-
-@media all and (max-width: 900px) {
-    
-}
-
 @media all and (max-width:450px) {
+    .mailimgholder {
+        /* Height and width don't match to round circle better */
+        height: 100px;
+        width: 100px;
+        margin-top: 20%;
+    }
     
+    .section.black h2{
+        margin-left: 12%;
+    }
 }

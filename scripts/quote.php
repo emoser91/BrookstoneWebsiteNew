@@ -114,10 +114,10 @@ if(isset($_POST['submit'])){
         // echo "<pre>";print_r($_POST);echo"</pre>";
         if ( mail($mailTo,$subject,$txt,$headers) ) 
         {
-            print("<script>window.alert('The email has been sent!');</script>");
+            // print("<script>window.alert('The email has been sent!');</script>");
             // echo "The email has been sent!";
             // You can also do a redirect to a new page like thank you for your email
-            // header('Location: index.html');
+            header('Location: emailsuccess.html');
     
         } 
         else 
