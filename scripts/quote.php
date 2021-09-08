@@ -44,7 +44,6 @@ function sendCaptchaResponse()
 
 }
 
-
 if(isset($_POST['submit'])){
     $name = $_POST['name'];
     $mailFrom = $_POST['email'];
@@ -122,8 +121,9 @@ if(isset($_POST['submit'])){
         } 
         else 
         {
-            print("<script>window.alert('The email has failed, Please Try Again.');</script>");
+            // print("<script>window.alert('The email has failed, Please Try Again.');</script>");
             // echo "The email has failed!";
+            header('Location: ../emailfailed.html');
         }
     }
     else

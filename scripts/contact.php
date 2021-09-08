@@ -44,8 +44,6 @@ function sendCaptchaResponse()
 
 }
 
-
-
 //Check status of submit button
 if(isset($_POST['submit'])){
     $name = $_POST['name'];
@@ -86,10 +84,11 @@ if(isset($_POST['submit'])){
             header('Location: ../emailsuccess.html');
     
         } 
-        else 
+        else
         {
-            print("<script>window.alert('The email has failed, Please Try Again.');</script>");
+            // print("<script>window.alert('The email has failed, Please Try Again.');</script>");
             // echo "The email has failed!";
+            header('Location: ../emailfailed.html');
         }
     }
     else

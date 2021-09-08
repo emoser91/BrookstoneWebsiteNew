@@ -1714,12 +1714,38 @@ form{
 
 /* ///////////////////////////////////////////// */
 /* Responsive */
+/* THE SITE WAS DESIGNED ON A 2K MONITOR */
 /* ///////////////////////////////////////////// */
-
 .group:after {
     content: "";
     display: table;
     clear: both;
+}
+
+@media all and (max-width: 1920px) {
+    ul.nav li a{
+        padding:15px;
+    }
+    #herobplogoimage{
+        background-size: 200px 157px;
+        margin-top: 2%;
+    }
+
+    #herologoimage{
+        background-size: 800px 199px;
+    }
+
+    .herologoimgholder{
+       height: 250px;
+    }
+
+    .section .slider{
+        height:100vh;
+    }
+
+    .downarrow-wrap {
+        top: 90vh;
+    }
 }
 
 @media all and (max-width: 1200px) {
@@ -1889,9 +1915,9 @@ form{
         height: 525px;
     } */
 
-    .downarrow-wrap {
+    /* .downarrow-wrap {
         top: 92em;
-    }
+    } */
 
     .speedmasterimgholder{
         height: 450px;
@@ -2181,9 +2207,9 @@ form{
         font-size: 60px;
     }
 
-    .downarrow-wrap {
+    /* .downarrow-wrap {
         top: 60em;
-    }
+    } */
 
     .service-tab {
         font-size: 0.8rem;
