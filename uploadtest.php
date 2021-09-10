@@ -6,12 +6,9 @@ $folder_name = 'clientfiles/';
 
 if(!empty($_FILES))
 {
-    print_r($_POST);
-    var_dump($_POST);
-
     //This data is not coming through for some reason!!
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
+    $firstname = $_POST['uname'];
+    $lastname = $_POST['pass'];
 
     $mailTo = "emoser91@gmail.com";
     $mailFrom = "emoser91@gmail.com";
@@ -20,6 +17,8 @@ if(!empty($_FILES))
     $headers = "Return-Path: ".$mailFrom;
     $headers = "CC: ".$mailFrom;
     $headers = "BCC: ".$mailFrom;
+
+    $subject = "Brookstone Printing File Upload";
 
     $txt = "You have received a File Upload e-mail: \n\n";
     $txt .= "Information: \n";
@@ -32,7 +31,6 @@ if(!empty($_FILES))
     $temp_file = $_FILES['file']['tmp_name'];
     $location = $folder_name . $_FILES['file']['name'];
     move_uploaded_file($temp_file, $location);
-
 }
 
 ?>
