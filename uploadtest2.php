@@ -35,7 +35,7 @@ if(!empty($_FILES))
 
     //Send Email
     $txt .= "File Name:  ".$_FILES['file']['name']."\n";
-    if ( mail($mailTo,$subject,$txt,$headers) ) 
+    mail($mailTo,$subject,$txt,$headers);
 
 }
 

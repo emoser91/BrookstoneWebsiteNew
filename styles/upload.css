@@ -80,16 +80,49 @@ buttonupload:hover{
 /* ///////////////////////////////////////////// */
 /* File Drop Box Modifications */
 /* ///////////////////////////////////////////// */
+.dropzone{
+    min-height: 500px;
+}
+
 /* TODO: fix this spelling error */
 #dropzoneFrom{
     width: 80%;
     margin-left: 10%;
     display: inline-block;
     text-align: center;
+    /* border:dashed; */
 }
 
 .dropzone .dz-message .dz-button {
     margin-left: 0px;
+}
+
+.dropzone .input_field {
+    margin-bottom: 10px;
+}
+
+form{
+    position:center;
+    display: inline-block;
+    width: 95%;
+    text-align: center;
+}
+
+.dropzone .input_field input[type="text"],
+.dropzone textarea {
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    padding: 10px;
+}
+
+.dropzone .dz-message .dz-button{
+    margin-top: 6%;
+    font-size: 1.17em;
+}
+
+.dashedline{
+    border:dashed;
+    border-width: 1px;
 }
 
 /* ///////////////////////////////////////////// */
