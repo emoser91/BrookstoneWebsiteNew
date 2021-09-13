@@ -1,83 +1,44 @@
 <?php
 
 //upload.php
+//This File will execute once for every file uploaded
 
 $folder_name = 'clientfiles/';
 
-// $mailTo = "main@ericmoser.com";
-$mailTo = "artwork@brookstoneprinting.com";
-
-//Just going to use the From section as a CC
-// $mailFrom = "emoser91@gmail.com";
-$mailFrom = "todd@brookstoneprinting.com";
-
-$headers = "From: ".$mailFrom;
-
-$subject = "Brookstone Printing File Upload";
-
-//Adding the rest of these helped make the email not go to spam in gmail
-$headers = "Reply-To: ".$mailFrom;
-$headers = "Return-Path: ".$mailFrom;
-$headers = "CC: ".$mailFrom;
-$headers = "BCC: ".$mailFrom;
-
-$txt = "You have received a file upload: \n\n";
-$txt .= "Information: \n";
-$txt .= "Subject: Brookstone Uploads \n";
-$txt .= "Message: A file has been uploaded to the clientfiles folder using Brookstone Printing drag and drop \n";
-
-//Form Personal Information
-//The information is not passing properly
-$name = $_POST['name'];
-$mailFrom = $_POST['email'];
-$company = $_POST['company'];
-$message = $_POST['message'];
-
-$txt .= "Name:  ".$name."\n";
-$txt .= "Email:  ".$email."\n";
-$txt .= "Company:  ".$company."\n";
-$txt .= "Message:  ".$message."\n";
-
 if(!empty($_FILES))
 {
- $temp_file = $_FILES['file']['tmp_name'];
- $location = $folder_name . $_FILES['file']['name'];
- move_uploaded_file($temp_file, $location);
+    $fullname = $_POST['fullname'];
+    $company = $_POST['company'];
+    $mailFrom = $_POST['email'];
+    $salesman = $_POST['salesman'];
+    $message = $_POST['message'];
 
- $filesent = $_FILES['file']['name'];
- $txt .= "File Name:  ".$filesent."\n";
- mail($mailTo,$subject,$txt,$headers);
+    $mailTo = "artwork@brookstoneprinting.com, todd@brookstoneprinting.com";
+    $headers = "From: ".$mailFrom;
+    $headers = "Reply-To: ".$mailFrom;
+    $headers = "Return-Path: ".$mailFrom;
+    $headers = "CC: ".$mailFrom;
+    $headers = "BCC: ".$mailFrom;
+
+    $subject = "Brookstone Printing File Upload";
+
+    $txt = "You have Received a File Upload Email: \n\n";
+    $txt .= "Information: \n";
+    $txt .= "Name:  ".$fullname."\n";
+    $txt .= "Company:  ".$company."\n";
+    $txt .= "Email:  ".$mailFrom."\n";
+    $txt .= "Salesman:  ".$salesman."\n";
+    $txt .= "Message:  ".$message."\n";
+
+    //Process File Transfer
+    $temp_file = $_FILES['file']['tmp_name'];
+    $location = $folder_name . $_FILES['file']['name'];
+    move_uploaded_file($temp_file, $location);
+
+    //Send Email
+    $txt .= "File Name:  ".$_FILES['file']['name']."\n";
+    mail($mailTo,$subject,$txt,$headers);
+
 }
-
-if(isset($_POST["name"]))
-{
- $filename = $folder_name.$_POST["name"];
- unlink($filename);
-}
-
-$result = array();
-
-$files = scandir('clientfiles');
-
-$output = '<div class="row">';
-
-if(false !== $files)
-{
- foreach($files as $file)
- {
-  if('.' !=  $file && '..' != $file)
-  {
-   $output .= '
-   <div class="col-md-2">
-    <img src="'.$folder_name.$file.'" class="img-thumbnail" width="175" height="175" style="height:175px;" />
-    <buttonupload type="button" class="btn btn-link remove_image" id="'.$file.'">Remove</buttonupload>
-   </div>
-   ';
-  }
- }
-}
-
-$output .= '</div>';
-echo $output;
 
 ?>

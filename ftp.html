@@ -163,35 +163,29 @@
                 require additional assistance with the upload process please email the Art Team at the above address. 
             </h2>
 
-            <form action="upload.php" class="dropzone" id="dropzoneFrom"></form>
-
-                <!-- New Testing Personal Information Form -->
-                <!-- <h3>Personal Information</h3>
+            <form action="upload.php" class="dropzone" id="dropzoneFrom" name="uploadform">
+                <h3>Personal Information</h3>
                 <div class="input_field">
-                    <input type="text" name="name1" placeholder="Name" id="name1">
-                </div> -->
-                <!-- <div class="input_field">
+                    <input type="text" name="fullname" placeholder="Name" id="fullname">
+                </div>
+                <div class="input_field">
                     <input type="text" name="company" placeholder="Company" id="company">
                 </div>
                 <div class="input_field">
                     <input type="text" name="email" placeholder="Email" id="email">
                 </div>
                 <div class="input_field">
+                    <input type="text" name="salesman" placeholder="Salesman Name" id="salesman">
+                </div>
+                <div class="input_field">
                     <textarea placeholder="Additional Information" name="message" id="message"></textarea>
-                </div> -->
-                <!-- <div class="g-recaptcha" data-sitekey="6LfRILEZAAAAACLNnsof8sHLiB-sKg6Qi0ZA3Nj4"></div> -->
-                
+                </div>
+                <div class="dashedline"></div>
             </form>
-            <br />
-            <br />
+            <br /><br />
             <div align="center">
                 <buttonupload type="button" class="btn btn-info" id="submit-all">Upload</buttonupload>
             </div>
-            <!-- <br />
-            <br />
-            <div id="preview"></div>
-            <br />
-            <br /> -->
         </div>
     </div>
     
@@ -445,35 +439,10 @@
                         var _this = this;
                         _this.removeAllFiles();
                     }
-                    list_image();
+                    document.uploadform.reset();
                 });
             },
             };
-        
-            list_image();
-
-            function list_image()
-            {
-                $.ajax({
-                    url:"upload.php",
-                    success:function(data){
-                        $('#preview').html(data);
-                    }
-                });
-            }
-        
-            $(document).on('click', '.remove_image', function(){
-                var name = $(this).attr('id');
-                $.ajax({
-                    url:"upload.php",
-                    method:"POST",
-                    data:{name:name},
-                    success:function(data)
-                    {
-                        list_image();
-                    }
-                })
-            });
             
         });
     </script>
