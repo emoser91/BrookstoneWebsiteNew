@@ -3,7 +3,7 @@
 //upload.php
 //This File will execute once for every file uploaded
 
-$folder_name = 'clientfiles/';
+$folder_name = '../clientfiles/';
 
 if(!empty($_FILES))
 {
