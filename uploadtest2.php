@@ -10,9 +10,11 @@ if(!empty($_FILES))
     $fullname = $_POST['fullname'];
     $company = $_POST['company'];
     $mailFrom = $_POST['email'];
+    $salesman = $_POST['salesman'];
     $message = $_POST['message'];
 
     $mailTo = "emoser91@gmail.com";
+    // $mailTo = "artwork@brookstoneprinting.com, todd@brookstoneprinting.com";
     $headers = "From: ".$mailFrom;
     $headers = "Reply-To: ".$mailFrom;
     $headers = "Return-Path: ".$mailFrom;
@@ -21,11 +23,12 @@ if(!empty($_FILES))
 
     $subject = "Brookstone Printing File Upload";
 
-    $txt = "You have received a File Upload Email: \n\n";
+    $txt = "You have Received a File Upload Email: \n\n";
     $txt .= "Information: \n";
     $txt .= "Name:  ".$fullname."\n";
     $txt .= "Company:  ".$company."\n";
     $txt .= "Email:  ".$mailFrom."\n";
+    $txt .= "Salesman:  ".$salesman."\n";
     $txt .= "Message:  ".$message."\n";
 
     //Process File Transfer

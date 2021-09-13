@@ -81,7 +81,7 @@ buttonupload:hover{
 /* File Drop Box Modifications */
 /* ///////////////////////////////////////////// */
 .dropzone{
-    min-height: 500px;
+    min-height: 550px;
 }
 
 /* TODO: fix this spelling error */
@@ -113,6 +113,11 @@ form{
     border: 1px solid #e0e0e0;
     width: 100%;
     padding: 10px;
+}
+
+.dropzone textarea {
+    height:60px;
+    resize:none;
 }
 
 .dropzone .dz-message .dz-button{
