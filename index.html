@@ -663,10 +663,9 @@
             <div id="error_message">
 
             </div>
-            <!-- <form action="" id="myform" onsubmit="return validate();"> -->
-            <form action="scripts/contact.php" method="post" id="myform" autocomplete="off">
+            <form action="scripts/contact.php" id="myform" method="post" onsubmit="return validate();">
                 <div class="input_field">
-                    <input type="text" autocomplete="off" name="name" placeholder="Name" id="name">
+                    <input type="text" name="name" placeholder="Name" id="name">
                 </div>
                 <div class="input_field">
                     <input type="text" name="subject" placeholder="Subject" id="subject">
@@ -680,13 +679,16 @@
                 <div class="input_field">
                     <textarea placeholder="Message" name="message" id="message"></textarea>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6LfRILEZAAAAACLNnsof8sHLiB-sKg6Qi0ZA3Nj4"></div>
+                <div class="g-recaptcha" id="recaptcha" data-sitekey="6LfRILEZAAAAACLNnsof8sHLiB-sKg6Qi0ZA3Nj4"></div> 
                 <div class="btn">
                     <input type="submit" name="submit">
                 </div>
             </form>
         </div>
     </div>
+
+    <!-- Validation Rules for contact modal popup before submit button will work -->
+    <script src="scripts/contactformvalidate.js"></script>
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
@@ -751,50 +753,6 @@
             document.querySelector('.bg-modal').style.display = "none";
         });
     </script>
-
-    <!-- Rules for contact modal popup before submit button will work -->
-    <!-- <script>
-        function validate() {
-            var name = document.getElementById("name").value;
-            var subject = document.getElementById("subject").value;
-            var phone = document.getElementById("phone").value;
-            var email = document.getElementById("email").value;
-            var message = document.getElementById("message").value;
-            var error_message = document.getElementById("error_message");
-
-            error_message.style.padding = "10px";
-
-            var text;
-
-            if (name.length < 4) {
-                text = "Please Enter valid Name";
-                error_message.innerHTML = text;
-                return false;
-            }
-            if (subject.length < 5) {
-                text = "Please Enter Subject";
-                error_message.innerHTML = text;
-                return false;
-            }
-            if (isNaN(phone) || phone.length != 10) {
-                text = "Please Enter valid Phone Number";
-                error_message.innerHTML = text;
-                return false;
-            }
-            if (email.indexOf("@") == -1 || email.length < 6) {
-                text = "Please Enter valid Email";
-                error_message.innerHTML = text;
-                return false;
-            }
-            if (message.length <= 1) {
-                text = "Please Enter Message";
-                error_message.innerHTML = text;
-                return false;
-            }
-            alert("Form Submitted Successfully!");
-            return true;
-        }
-    </script> -->
 
     <!-- Makes the height of the nav bar smaller when scrolling -->
     <script>

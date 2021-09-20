@@ -61,12 +61,12 @@
         <h2>Please submit as much of the form below as possible to give us a brief description of your project or call us at 262.255.3130. 
             One of our highly experienced team members will answer your call or be in touch shortly. It's that fast and easy! We'd love to hear from you!
         </h2>
-        <div id="error_message"></div>
+        <div id="quote_error_message"></div>
 
         <form action="scripts/quote.php" method="post" id="myQuoteform">
             <h3>Personal Information</h3>
             <div class="input_field">
-                <input type="text" name="name" placeholder="Name" id="name">
+                <input type="text" name="name" placeholder="Name" id="fullname">
             </div>
             <div class="input_field">
                 <input type="text" name="company" placeholder="Company" id="company">
@@ -84,17 +84,17 @@
                 <input type="text" name="zip" placeholder="Zip Code" id="zipcode">
             </div>
             <div class="input_field">
-                <input type="text" name="phone" placeholder="Phone" id="phone">
+                <input type="text" name="phone" placeholder="Phone" id="phonenumber">
             </div>
             <div class="input_field">
-                <input type="text" name="email" name="email" placeholder="Email" id="email">
+                <input type="text" name="email" name="email" placeholder="Email" id="emailaddr">
             </div>
             <div class="input_field">
                 <input type="text" name="fax" placeholder="Fax" id="fax">
             </div>
             <h3>Product Information</h3>
             <div class="input_field">
-                <input type="text" name="job" placeholder="Job Description" id="subject">
+                <input type="text" name="job" placeholder="Job Description" id="subjectjob">
             </div>
             <div class="input_field">
                 <input type="text" name="quantity" placeholder="Quantity" id="quantity">
@@ -121,7 +121,7 @@
                 <input type="text" name="duedate" placeholder="Due Date" id="duedate">
             </div>
             <div class="input_field">
-                <textarea placeholder="Additional Information" name="message" id="message"></textarea>
+                <textarea placeholder="Additional Information" name="message" id="messageinfo"></textarea>
             </div>
             <div class="text-center" >
                 <div class="g-recaptcha" data-sitekey="6LfRILEZAAAAACLNnsof8sHLiB-sKg6Qi0ZA3Nj4"></div>
@@ -174,7 +174,7 @@
             <div id="error_message">
 
             </div>
-            <form action="scripts/contact.php" method="post" id="myform">
+            <form action="scripts/contact.php" id="myform" method="post" onsubmit="return validate();">
                 <div class="input_field">
                     <input type="text" name="name" placeholder="Name" id="name">
                 </div>
@@ -190,13 +190,120 @@
                 <div class="input_field">
                     <textarea placeholder="Message" name="message" id="message"></textarea>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6LfRILEZAAAAACLNnsof8sHLiB-sKg6Qi0ZA3Nj4"></div>
+                <div class="g-recaptcha" id="recaptcha" data-sitekey="6LfRILEZAAAAACLNnsof8sHLiB-sKg6Qi0ZA3Nj4"></div> 
                 <div class="btn">
                     <input type="submit" name="submit">
                 </div>
             </form>
         </div>
     </div>
+
+    <!-- Validation Rules for contact modal popup before submit button will work -->
+    <!-- Can not use the contactformvalidate.js because there are more then one Google reCAPTCHA on the page -->
+    <script>
+        function validateEmail(email){
+            var re = /\S+@\S+\.\S+/;
+            //return true if valid email
+            return re.test(email);
+        }
+
+        function validatePhoneNumber(phone){
+            var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+            //return true if valid phone
+            return re.test(phone);
+        }
+
+        function isCyrillicAlphabet(input){
+            //Range of Cyrillic alphabet (Russian)
+            var re = /[\u0400-\u04FF]/;
+            //return true if Cyrillic character detected
+            return re.test(input);
+        }
+
+        function validateRecaptcha(recaptcha){
+            if(recaptcha.length == 0){
+                //reCaptcha not verified
+                return false;
+            }
+            else{
+                //reCaptch verified
+                return true;
+            }
+        }
+
+        function validate() {
+            var name = document.getElementById("name").value;
+            var subject = document.getElementById("subject").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            var error_message = document.getElementById("error_message");
+
+            error_message.style.padding = "10px";
+
+            var text;
+
+            if (name.length < 1 || isCyrillicAlphabet(name)) {
+                document.getElementById('name').style.borderColor = "red";
+                text = "Please Enter Valid Name";
+                error_message.innerHTML = text;
+                return false;
+            }
+            else{
+                document.getElementById('name').style.borderColor = "#e0e0e0";
+            }
+
+            if (subject.length < 1 || isCyrillicAlphabet(subject)) {
+                document.getElementById('subject').style.borderColor = "red";
+                text = "Please Enter Subject";
+                error_message.innerHTML = text;
+                return false;
+            }
+            else{
+                document.getElementById('subject').style.borderColor = "#e0e0e0";
+            }
+
+            if (validatePhoneNumber(phone) == false) {
+                document.getElementById('phone').style.borderColor = "red";
+                text = "Please Enter Valid Phone Number";
+                error_message.innerHTML = text;
+                return false;
+            }
+            else{
+                document.getElementById('phone').style.borderColor = "#e0e0e0";
+            }
+
+            if(validateEmail(email) == false || isCyrillicAlphabet(email)){
+                document.getElementById('email').style.borderColor = "red";
+                text = "Please Enter Valid Email";
+                error_message.innerHTML = text;
+                return false;
+            }
+            else{
+                document.getElementById('email').style.borderColor = "#e0e0e0";
+            }
+
+            if (message.length <= 1 || isCyrillicAlphabet(message)) {
+                document.getElementById('message').style.borderColor = "red";
+                text = "Please Enter Message";
+                error_message.innerHTML = text;
+                return false;
+            }
+            else{
+                document.getElementById('message').style.borderColor = "#e0e0e0";
+            }
+
+            // Can not check Google reCAPTCHA because there are more then one on the page
+
+            // alert("Form Submitted Successfully!");
+            // Clear out error banner on success
+            error_message.style.padding = "0px";
+            error_message.innerHTML = null;
+
+            return true;
+        }
+    </script>
+    
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
@@ -257,50 +364,6 @@
             document.querySelector('.bg-modal').style.display = "none";
         });
     </script>
-
-    <!-- Rules for contact modal popup before submit button will work -->
-    <!-- <script>
-        function validate() {
-            var name = document.getElementById("name").value;
-            var subject = document.getElementById("subject").value;
-            var phone = document.getElementById("phone").value;
-            var email = document.getElementById("email").value;
-            var message = document.getElementById("message").value;
-            var error_message = document.getElementById("error_message");
-
-            error_message.style.padding = "10px";
-
-            var text;
-
-            if (name.length < 4) {
-                text = "Please Enter valid Name";
-                error_message.innerHTML = text;
-                return false;
-            }
-            if (subject.length < 5) {
-                text = "Please Enter Subject";
-                error_message.innerHTML = text;
-                return false;
-            }
-            if (isNaN(phone) || phone.length != 10) {
-                text = "Please Enter valid Phone Number";
-                error_message.innerHTML = text;
-                return false;
-            }
-            if (email.indexOf("@") == -1 || email.length < 6) {
-                text = "Please Enter valid Email";
-                error_message.innerHTML = text;
-                return false;
-            }
-            if (message.length <= 1) {
-                text = "Please Enter Message";
-                error_message.innerHTML = text;
-                return false;
-            }
-            alert("Form Submitted Successfully!");
-            return true;
-        }
-    </script> -->
 
     <!-- Makes the height of the nav bar smaller when scrolling -->
     <script>
