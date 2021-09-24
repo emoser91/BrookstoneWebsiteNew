@@ -1,4 +1,6 @@
 // Quote Form Validation
+// There are two different locations that show error messages based on which part of the from an error occurs. 
+// The page will center on the error messages
 
 function validateEmail(email){
     var re = /\S+@\S+\.\S+/;

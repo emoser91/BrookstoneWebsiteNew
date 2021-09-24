@@ -111,19 +111,28 @@ if(isset($_POST['submit'])){
     {
         //Validation has passed
         // echo "<pre>";print_r($_POST);echo"</pre>";
-        if ( mail($mailTo,$subject,$txt,$headers) ) 
+        if(empty($name) || empty($company) || empty($address) || empty($city) || empty($state) || empty($zip) || empty($phone) || empty($mailFrom) || 
+        empty($job) || empty($quantity) || empty($pages) || empty($size) || empty($stock) || empty($ink) || empty($sides) || empty($artwork) || empty($duedate) || empty($message))
         {
-            // print("<script>window.alert('The email has been sent!');</script>");
-            // echo "The email has been sent!";
-            // You can also do a redirect to a new page like thank you for your email
-            header('Location: ../emailsuccess.html');
-    
-        } 
-        else 
-        {
-            // print("<script>window.alert('The email has failed, Please Try Again.');</script>");
-            // echo "The email has failed!";
+            // echo "A Field was Empty, Please Try Again.";
             header('Location: ../emailfailed.html');
+        }
+        else
+        {
+            if ( mail($mailTo,$subject,$txt,$headers) ) 
+            {
+                // print("<script>window.alert('The email has been sent!');</script>");
+                // echo "The email has been sent!";
+                // You can also do a redirect to a new page like thank you for your email
+                header('Location: ../emailsuccess.html');
+        
+            } 
+            else 
+            {
+                // print("<script>window.alert('The email has failed, Please Try Again.');</script>");
+                // echo "The email has failed!";
+                header('Location: ../emailfailed.html');
+            }
         }
     }
     else
