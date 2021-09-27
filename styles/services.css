@@ -65,7 +65,7 @@
 }
 
 #printimage2{
-    background-image: url("../images/digitalprinting.jpg");
+    background-image: url("../images/copying3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,7 +73,7 @@
 }
 
 #printimage3{
-    background-image: url("../images/copying.jpg");
+    background-image: url("../images/copying1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,7 +81,7 @@
 }
 
 #printimage4{
-    background-image: url("../images/variabledata.jpg");
+    background-image: url("../images/copying4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
