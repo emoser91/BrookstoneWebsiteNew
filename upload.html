@@ -383,6 +383,8 @@
          
             Dropzone.options.dropzoneFrom = {
             autoProcessQueue: false,
+            //Timeout = 20mins
+            timeout: 1200000,
             parallelUploads: 10,
             acceptedFiles:".png,.jpg,.gif,.bmp,.jpeg,.pdf,.zip,.ai",
             init: function(){
@@ -391,6 +393,7 @@
                 submitButton.addEventListener("click", function(){
                     myDropzone.processQueue();
                 });
+                
                 this.on("complete", function(){
                     if(this.getQueuedFiles().length == 0 && this.getUploadingFiles().length == 0)
                     {
@@ -398,6 +401,12 @@
                         _this.removeAllFiles();
                     }
                     document.uploadform.reset();
+                });
+
+                // Alert that will say why an upload failed
+                // Will says if a file is too big or if an upload timeout happens
+                this.on("error", function(file, response) {
+                alert(response);
                 });
             },
             };
