@@ -180,6 +180,7 @@
                 <div class="input_field">
                     <textarea placeholder="Additional Information" name="message" id="messageinfo"></textarea>
                 </div>
+                <div>Please only use for File Sizes 50MB and Smaller. Contact the Art Team for Large File Size Transfers.</div><br />
                 <div class="dashedline"></div>
             </form>
             <br /><br />
@@ -383,8 +384,10 @@
          
             Dropzone.options.dropzoneFrom = {
             autoProcessQueue: false,
-            //Timeout = 20mins
-            timeout: 1200000,
+            //Timeout = 2mins
+            //We have a php max_execution_time of 90seconds 
+            //Maximum of 10 files can be uploaded at the same time with a file limit of 256Mb and 2min timeout
+            timeout: 120000,
             parallelUploads: 10,
             acceptedFiles:".png,.jpg,.gif,.bmp,.jpeg,.pdf,.zip,.ai",
             init: function(){
